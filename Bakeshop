@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Oya's Delight - Bakeshop Menu</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
+
+        body {
+            font-family: 'Playfair Display', serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f4ee;
+            color: #4e3a28;
+        }
+        header {
+            background-image: url('file:///C:/Users/User/Downloads/Sample%20sandwich/header_background.png');
+            background-size: cover;
+            background-position: center;
+            padding: 50px 15px;
+            text-align: center;
+            color: #4e3a28;
+            border-bottom: 5px solid #e4c79b;
+        }
+        header img {
+            max-width: 180px;
+            margin-bottom: 15px;
+        }
+        header h1 {
+            margin: 10px 0;
+            font-size: 2.8rem;
+            letter-spacing: 1px;
+        }
+        header p {
+            margin: 5px 0;
+            font-size: 1.2rem;
+            font-style: italic;
+        }
+        .search-bar {
+            margin: 20px auto;
+            max-width: 500px;
+            text-align: center;
+        }
+        .search-bar input {
+            width: 100%;
+            padding: 10px;
+            font-size: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .container {
+            max-width: 1100px;
+            margin: 20px auto;
+            padding: 20px;
+        }
+        .menu-section {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: space-between;
+        }
+        .menu-category {
+            flex: 1 1 calc(50% - 20px);
+            background-color: #fff9f3;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .menu-category.cakes {
+            background-image: url('file:///C:/Users/User/Downloads/Sample%20sandwich/category_cakes_background.png');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+        }
+        .menu-category h2 {
+            font-size: 1.8rem;
+            color: inherit;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #e4c79b;
+            padding-bottom: 5px;
+        }
+        .menu-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 8px 0;
+            border-bottom: 1px dashed #ddd;
+        }
+        .menu-item:last-child {
+            border-bottom: none;
+        }
+        .item-name {
+            font-weight: bold;
+        }
+        .item-price {
+            color: inherit;
+            font-weight: bold;
+        }
+        footer {
+            background-color: #eddbaf;
+            color: white;
+            padding: 25px;
+            text-align: center;
+            font-size: 0.9rem;
+            border-top: 5px solid #e4c79b;
+        }
+        footer .contact-info-footer {
+            font-size: 1rem;
+            margin-top: 10px;
+        }
+        .hidden {
+            display: none !important;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="file:///C:/Users/User/Downloads/Sample%20sandwich/oyas_delight.png" alt="Oya's Delight Logo">
+        <h1>Oya's Delight</h1>
+        <p>Exquisite Treats, Baked with Love</p>
+    </header>
+
+    <!-- Search Bar -->
+    <div class="search-bar">
+        <input type="text" id="searchInput" placeholder="Search for cakes, cookies, bread, and more...">
+    </div>
+
+    <div class="container">
+        <section class="menu-section" id="menuSection">
+            <!-- Cakes -->
+            <div class="menu-category cakes">
+                <h2>Cakes</h2>
+                <div class="menu-item">
+                    <span class="item-name">Chocolate Fudge Cake</span>
+                    <span class="item-price">$25.00</span>
+                </div>
+                <div class="menu-item">
+                    <span class="item-name">Vanilla Buttercream Cake</span>
+                    <span class="item-price">$20.00</span>
+                </div>
+                <div class="menu-item">
+                    <span class="item-name">Red Velvet Cake</span>
+                    <span class="item-price">$22.00</span>
+                </div>
+                <div class="menu-item">
+                    <span class="item-name">Carrot Cake</span>
+                    <span class="item-price">$24.00</span>
+                </div>
+            </div>
+
+            <!-- Cheesecakes -->
+            <div class="menu-category">
+                <h2>Cheesecakes</h2>
+                <div class="menu-item">
+                    <span class="item-name">Classic New York Cheesecake</span>
+                    <span class="item-price">$7.00</span>
+                </div>
+                <div class="menu-item">
+                    <span class="item-name">Strawberry Cheesecake</span>
+                    <span class="item-price">$7.50</span>
+                </div>
+                <div class="menu-item">
+                    <span class="item-name">Blueberry Cheesecake</span>
+                    <span class="item-price">$7.50</span>
+                </div>
+                <div class="menu-item">
+                    <span class="item-name">Oreo Cheesecake</span>
+                    <span class="item-price">$8.00</span>
+                </div>
+            </div>
+
+            <!-- Cookies -->
+            <div class="menu-category">
+                <h2>Cookies</h2>
+                <div class="menu-item">
+                    <span class="item-name">Chocolate Chip Cookie</span>
+                    <span class="item-price">$1.50</span>
+                </div>
+                <div class="menu-item">
+                    <span class="item-name">Oatmeal Raisin Cookie</span>
+                    <span class="item-price">$1.75</span>
+                </div>
+                <div class="menu-item">
+                    <span class="item-name">Peanut Butter Cookie</span>
+                    <span class="item-price">$1.25</span>
+                </div>
+                <div class="menu-item">
+                    <span class="item-name">Sugar Cookie</span>
+                    <span class="item-price">$1.00</span>
+                </div>
+            </div>
+
+            <!-- Breads -->
+            <div class="menu-category">
+                <h2>Breads</h2>
+                <div class="menu-item">
+                    <span class="item-name">Sourdough Loaf</span>
+                    <span class="item-price">$4.50</span>
+                </div>
+                <div class="menu-item">
+                    <span class="item-name">Baguette</span>
+                    <span class="item-price">$3.00</span>
+                </div>
+                <div class="menu-item">
+                    <span class="item-name">Ciabatta</span>
+                    <span class="item-price">$3.50</span>
+                </div>
+                <div class="menu-item">
+                    <span class="item-name">Whole Wheat Bread</span>
+                    <span class="item-price">$5.00</span>
+                </div>
+            </div>
+
+            <!-- Sandwiches -->
+            <div class="menu-category">
+                <h2>Sandwiches</h2>
+                <div class="menu-item">
+                    <span class="item-name">Classic Club Sandwich</span>
+                    <span class="item-price">$8.00</span>
+                </div>
+                <div class="menu-item">
+                    <span class="item-name">Turkey & Avocado Sandwich</span>
+                    <span class="item-price">$9.00</span>
+                </div>
+                <div class="menu-item">
+                    <span class="item-name">Grilled Cheese Sandwich</span>
+                    <span class="item-price">$7.00</span>
+                </div>
+                <div class="menu-item">
+                    <span class="item-name">Veggie Delight Sandwich</span>
+                    <span class="item-price">$7.50</span>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Oya's Delight. All rights reserved.</p>
+        <div class="contact-info-footer">
+            <p>Email: gloriacardenas0503@gmail.com</p>
+            <p>Phone: 09474255294</p>
+        </div>
+    </footer>
+
+    <script>
+        const searchInput = document.getElementById('searchInput');
+        const menuCategories = document.querySelectorAll('.menu-category');
+
+        searchInput.addEventListener('input', () => {
+            const searchTerm = searchInput.value.toLowerCase();
+
+            menuCategories.forEach(category => {
+                const items = category.querySelectorAll('.menu-item');
+                let matchFound = false;
+
+                items.forEach(item => {
+                    const itemName = item.querySelector('.item-name').textContent.toLowerCase();
+                    if (itemName.includes(searchTerm)) {
+                        item.style.display = 'flex';
+                        matchFound = true;
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+
+                category.style.display = matchFound ? 'block' : 'none';
+            });
+        });
+    </script>
+</body>
+</html>
+
+
+
